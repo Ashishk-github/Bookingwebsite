@@ -13,13 +13,11 @@ const f=document.querySelector('#f');
           alert('Please enter all the fields');
         }
         else{
-          const l=document.createElement('l');
-          l.appendChild(document.createTextNode(`${fname.value}
-          ${mail.value}
-          ${ph.value}
-          ${date.value}
-          ${time.value}`));
-          console.log(l)
+          localStorage.setItem('Name',fname.value)
+          localStorage.setItem('mail',mail.value)
+          localStorage.setItem('ph',ph.value)
+          localStorage.setItem('date',date.value)
+          localStorage.setItem('time',time.value)
           alert('success');
           fname.value=''
           ph.value=''
